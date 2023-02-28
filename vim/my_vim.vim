@@ -23,6 +23,8 @@ set hlsearch      "검색어 하이라이팅
 set incsearch     "
 set nowrapscan    "검색할 때 문서의 끝에서 처음으로 안돌아감
 
+set paste         " 붙여넣기 계단현상 없애기
+
 set history=1000  "vi 편집기록 기억갯수 .viminfo에 기록
 set fencs=ucs-bom,utf-8,euc-kr.latin1  "한글 파일은 euc-kr로, 유니코드는 유니코드로
 set fileencoding=utf-8                 "파일저장인코딩

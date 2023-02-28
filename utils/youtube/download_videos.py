@@ -7,7 +7,7 @@ pl = Playlist('https://www.youtube.com/watch?v=ZrNp9Be83qQ&list=PLXvgR_grOs1DGFO
 total = len(pl)
 for i, video in enumerate(pl.videos, 1):
     if i<26: continue
-    print("[%s/%s]" % (i, total))
+    print("Progress => [%s/%s]" % (i, total))
     try:
         high_res_video = video.streams.get_highest_resolution()
     except Exception as e:
@@ -15,4 +15,6 @@ for i, video in enumerate(pl.videos, 1):
         continue
 
     print("mimetype: " + high_res_video.mime_type)
+    print("Start downloading...")
     high_res_video.download(DOWNLOAD_FOLDER)
+    print("Download is completed.")

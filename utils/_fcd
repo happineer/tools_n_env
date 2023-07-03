@@ -1,0 +1,10 @@
+#!/bin/bash
+
+fullpath=`which $1`
+if [ -z "$fullpath" ]; then
+    echo "[Error] $1 is not exists"
+fi
+
+newpath=`dirname "$fullpath"`
+echo "moving to "$newpath
+cd $newpath
